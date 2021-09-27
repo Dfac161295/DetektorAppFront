@@ -24,7 +24,7 @@
     <h2>Existencia de Vehiculos</h2>
 
     <div cdkDropList #propietariolist="cdkDropList" [cdkDropListData]="vehiculos" [cdkDropListConnectedTo]="[vehiculolist]" class="example-list" (cdkDropListDropped)="drop($event)">
-        <div class="example-box" *ngFor="let item of vehiculos" [ngStyle]="{ 'cursor' : enabledCursor}" cdkDrag>{{item.marca}} {{item.color}} {{item.modelo}}</div>
+        <div class="example-box" *ngFor="let item of vehiculos" [ngStyle]="{ 'opacity' : enabledCursor, 'pointer-events' : PointerEvents }" cdkDrag>{{item.marca}} {{item.color}} {{item.modelo}}</div>
     </div>
 </div>
 
@@ -33,6 +33,6 @@
     <h2>Asociar</h2>
 
     <div cdkDropList #vehiculolist="cdkDropList" [cdkDropListData]="lstvehiculos" [cdkDropListConnectedTo]="[propietariolist]" class="example-list" (cdkDropListDropped)="drop($event)">
-        <div class="example-box" *ngFor="let item of lstvehiculos" [ngStyle]="{ 'cursor' : enabledCursor}" cdkDrag>{{item.marca}} {{item.color}} {{item.modelo}}</div>
+        <div class="example-box" *ngFor="let item of lstvehiculos" [ngStyle]="{ 'opacity' : enabledCursor, 'pointer-events' : PointerEvents }" cdkDrag>{{item.marca}} {{item.color}} {{item.modelo}}</div>
     </div>
 </div>

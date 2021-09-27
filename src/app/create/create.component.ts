@@ -15,6 +15,7 @@ export class CreateComponent implements OnInit {
   lstvehiculos : any[] = [];
   vehiculos : any[];
   enabledCursor: string;
+  PointerEvents : string;
   selectedCar: string;
   selectedProp: string = "";
   @ViewChild('vehiculolist') vehiculoLst: ElementRef;
@@ -36,9 +37,11 @@ export class CreateComponent implements OnInit {
   cmbPropietario(e){
 
     if(e == "7"){
-     this.enabledCursor = "not-allowed";
+     this.enabledCursor = "0.2";
+     this.PointerEvents = "none";
     }else{
-     this.enabledCursor = "move";
+     this.enabledCursor = "1";
+     this.PointerEvents = "auto";
     }
 
    this.vehiculoService.getVehiculosByPropietaryId(e).subscribe(data => {
