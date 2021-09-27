@@ -1,0 +1,38 @@
+<h2>Propietario</h2>
+<mat-form-field appearance="fill">
+    <mat-label>Propietario del vehiculo</mat-label>
+    <mat-select (selectionChange)="cmbPropietario($event.value)" [(ngModel)]="selectedProp" name="propietario">
+        <mat-option *ngFor="let p of propietario" [value]="p.dbid_">
+            {{p.nombres}} {{p.apellidos}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+
+
+
+
+
+<br>
+<br>
+
+
+
+
+
+
+<div class="example-container" id="ExistenciaId" #ExistenciaId>
+    <h2>Existencia de Vehiculos</h2>
+
+    <div cdkDropList #propietariolist="cdkDropList" [cdkDropListData]="vehiculos" [cdkDropListConnectedTo]="[vehiculolist]" class="example-list" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of vehiculos" [ngStyle]="{ 'cursor' : enabledCursor}" cdkDrag>{{item.marca}} {{item.color}} {{item.modelo}}</div>
+    </div>
+</div>
+
+
+<div class="example-container" id="AsociarId" #AsociarId>
+    <h2>Asociar</h2>
+
+    <div cdkDropList #vehiculolist="cdkDropList" [cdkDropListData]="lstvehiculos" [cdkDropListConnectedTo]="[propietariolist]" class="example-list" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of lstvehiculos" [ngStyle]="{ 'cursor' : enabledCursor}" cdkDrag>{{item.marca}} {{item.color}} {{item.modelo}}</div>
+    </div>
+</div>

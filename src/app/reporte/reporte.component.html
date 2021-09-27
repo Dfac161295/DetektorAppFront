@@ -1,0 +1,45 @@
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+
+    <ng-container matColumnDef="propietario">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Propietario </th>
+        <td mat-cell *matCellDef="let element"> {{element.propietario.nombres}} {{element.propietario.apellidos}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="placa">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Placa </th>
+        <td mat-cell *matCellDef="let element"> {{element.placa}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="marca">
+        <th mat-header-cell *matHeaderCellDef> Marca </th>
+        <td mat-cell *matCellDef="let element"> {{element.marca}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="color">
+        <th mat-header-cell *matHeaderCellDef> Color </th>
+        <td mat-cell *matCellDef="let element"> {{element.color}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+<!--
+<table matSort (matSortChange)="sortData($event)">
+    <tr>
+        <th mat-sort-header="propietario">propietario</th>
+        <th mat-sort-header="placa">placa</th>
+        <th mat-sort-header="marca">marca</th>
+        <th mat-sort-header="color">color</th>
+    </tr>
+
+    <tr *ngFor="let v of dataSource">
+        <td>{{v.propietario.nombres}} {{v.propietario.apellidos}}</td>
+        <td>{{v.placa}}</td>
+        <td>{{v.marca}}</td>
+        <td>{{v.color}}</td>
+    </tr>
+</table>
+-->

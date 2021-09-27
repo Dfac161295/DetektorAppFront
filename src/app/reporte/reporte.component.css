@@ -1,0 +1,13 @@
+table {
+    margin: 100px auto;
+    width: 70%;
+    table-layout: fixed;
+}
+
+th,
+td {
+    overflow: hidden;
+    width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

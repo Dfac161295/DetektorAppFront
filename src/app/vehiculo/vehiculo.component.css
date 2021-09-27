@@ -1,0 +1,22 @@
+#TituloMantenimiento {
+    font-size: 2em;
+    margin: 15px 35px;
+}
+
+#MenuMantenimiento {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ContenidoMantenimiento {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    margin-left: 10px;
+}
