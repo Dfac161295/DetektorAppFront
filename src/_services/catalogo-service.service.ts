@@ -10,7 +10,7 @@ export class CatalogoService {
   constructor(private http: HttpClient) {}
 
   getCatalogo(): Observable<any>{
-    return this.http.get("http://localhost:8080/detektor/propietario/getAll");
+    return this.http.get("https://detektorbackend.herokuapp.com/detektor/propietario/getAll");
   }
 
 }
