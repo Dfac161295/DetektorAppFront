@@ -3,9 +3,9 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static('./dist/detektor-app'));
+app.use(express.static('./dist/DetektorApp'));
 app.get('/', function(req, res) {
-    res.sendFile(path.join('dist/detektor-app/'));
+    res.sendFile(path.join('dist/DetektorApp/'));
 });
 
 app.listen(process.env.PORT || 8080);
