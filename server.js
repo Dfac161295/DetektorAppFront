@@ -5,6 +5,8 @@ const app = express();
 
 app.use(express.static('./dist/DetektorApp'));
 app.get('/', function(req, res) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     res.sendFile(path.join('dist/DetektorApp/'));
 });
 
