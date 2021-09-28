@@ -14,23 +14,23 @@ export class VehiculoService {
   }
 
   getVehiculosAvailables() : Observable<any>{
-    return this.http.get('https://detektorbackend.herokuapp.com/vehiculo/getAllVehiculesAvailables');
+    return this.http.get('https://detektorbackend.herokuapp.com/detektor/vehiculo/getAllVehiculesAvailables');
   }
 
   getVehiculosByPropietaryId(dbid : any) : Observable<any>{
-    return this.http.get('https://detektorbackend.herokuapp.com/vehiculo/getAllVehiculesByPropietaryId/' + dbid);
+    return this.http.get('https://detektorbackend.herokuapp.com/detektor/vehiculo/getAllVehiculesByPropietaryId/' + dbid);
   }
 
   createVehiculos(vehiculo: any){
-    return this.http.put('https://detektorbackend.herokuapp.com/vehiculo/update',vehiculo).subscribe();
+    return this.http.put('https://detektorbackend.herokuapp.com/detektor/vehiculo/update',vehiculo).subscribe();
   }
 
   updateVehiculos(vehiculo: any){
-    return this.http.put('https://detektorbackend.herokuapp.com/vehiculo/update', vehiculo).subscribe();
+    return this.http.put('https://detektorbackend.herokuapp.com/detektor/vehiculo/update', vehiculo).subscribe();
   }
 
   deleteVehiculos(placa : any) : Observable<any>{
-    return this.http.delete('https://detektorbackend.herokuapp.com/vehiculo/delete/' + placa);
+    return this.http.delete('https://detektorbackend.herokuapp.com/detektor/vehiculo/delete/' + placa);
   }
 
 }
