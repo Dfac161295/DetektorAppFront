@@ -19,7 +19,8 @@ const routes: Routes = [
       {path: 'delete-component', component: DeleteComponent}
     ]
   },
-  { path: 'reporte-component', component: ReporteComponent }
+  { path: 'reporte-component', component: ReporteComponent },
+  { path: '/', component: CatalogoComponent}
 ];
 
 @NgModule({
